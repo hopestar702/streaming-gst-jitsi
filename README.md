@@ -1,11 +1,3 @@
-# gst-meet: Integrate Jitsi Meet conferences with GStreamer pipelines
-
-Note: gst-meet is in an **alpha** state and is under active development. The command-line options and the lib-gst-meet API are subject to change.
-
-gst-meet provides a library and tool for integrating Jitsi Meet conferences with GStreamer pipelines. You can pipe audio and video into a conference as a participant, and pipe out other participants' audio and video streams.
-
-Thanks to GStreamer's flexibility and wide range of plugins, this enables many new possibilities.
-
 ## Dependencies
 
 * `gstreamer` 1.20
@@ -137,26 +129,3 @@ Building with the `log-rtp` feture adds a `--log-rtp` command line flag which lo
 ## Debugging
 
 It can sometimes be tricky to get GStreamer pipeline syntax and structure correct. To help with this, you can try setting the `GST_DEBUG` environment variable (for example, `3` is modestly verbose, while `6` produces copious per-packet output). You can also set `GST_DEBUG_DUMP_DOT_DIR` to the relative path to a directory (which must already exist). `.dot` files containing the pipeline graph will be saved to this directory, and can be converted to `.png` with the `dot` tool from GraphViz; for example `dot filename.dot -Tpng > filename.png`.
-
-## License
-
-`gst-meet`, `lib-gst-meet`, `nice` and `nice-sys` are licensed under either of
-
- * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
- * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
-
-at your option.
-
-The dependency `xmpp-parsers` is licensed under the Mozilla Public License, Version 2.0, https://www.mozilla.org/en-US/MPL/2.0/
-
-The dependency `gstreamer` is licensed under the GNU Lesser General Public License, Version 2.1, https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html.
-
-## Contribution
-
-Any kinds of contributions are welcome as a pull request.
-
-Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in these crates by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
-
-## Acknowledgements
-
-`gst-meet` development is sponsored by [AVStack](https://www.avstack.io/). We provide globally-distributed, scalable, managed Jitsi Meet backends.
